@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'voice_screen.dart';
 
 void main() {
   runApp(const JarvisApp());
@@ -28,6 +29,15 @@ class Dashboard extends StatelessWidget {
         foregroundColor: Colors.black,
         minimumSize: const Size(double.infinity, 60),
       ),
+      ElevatedButton(
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => const VoiceScreen()),
+    );
+  },
+  child: const Text("VOICE JARVIS"),
+),
       onPressed: () {
         Navigator.push(
           context,
